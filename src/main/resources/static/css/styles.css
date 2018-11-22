@@ -1,0 +1,34 @@
+body
+{
+	margin: 0;
+}
+
+.header
+{
+	min-height: 30px;
+	padding: 10px;
+	font-weight: bold;
+	color: white;
+	background-color: #4cb6d8;
+}
+
+.content
+{
+	padding: 20px;
+	font-style: italic;
+}
+
+.header-block-with-tabs
+{
+	margin: 0 30px;
+}
+
+.header-block-with-tabs a
+{
+	color: #FFEB3B;
+	font-size: 15pt;
+	text-decoration: none;
+	display: inline-block;
+	border: 1px solid;
+	padding: 3px 5px;
+}

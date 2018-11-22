@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html layout:decorate="~{layouts/layoutOneColumn}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Unknown Error</title>
+</head>
+
+<body>
+	<div layout:fragment="content">
+		
+		<h1>Sorry, error occurred. Please contact us.</h1>
+
+		<h3>Technical details:</h3>
+		<p th:if="${url}">
+			<b>Page:</b> <span th:text="${url}"></span>
+		</p>
+
+		<p th:if="${timestamp}" id='created'>
+			<b>Occurred:</b> <span th:text="${timestamp}"></span>
+		</p>
+
+		<p th:if="${status}">
+			<b>Response Status:</b>
+			<span th:text="${status}"></span>
+			<span th:if="${error}" th:text="'('+${error}+')'"></span>
+		</p>
+		
+		<p th:if="${exception}">
+			<span th:utext="'Exception: ' + ${exception.message}"></span>
+		</p>
+		
+		<ul>
+			<li th:each="ste : ${exception?.stackTrace}">
+				<span th:utext="${ste}"></span>
+			</li>
+		</ul>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layouts/layoutOneColumn}"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+<title>Secure Resource</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<h1>This is a hidden page. Only authorized users can get access to it.</h1>
+	</div>
+</body>
+</html>
